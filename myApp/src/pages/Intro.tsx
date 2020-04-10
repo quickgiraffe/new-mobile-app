@@ -8,7 +8,7 @@ export const Intro: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Introduction</IonTitle>
+          <IonTitle>Intro</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -17,9 +17,8 @@ export const Intro: React.FC = () => {
             <IonTitle size="large">Introduction</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <MainContainer name="Introduction Page" />
+        <MainContainer name="Intro Page" />
       </IonContent>
     </IonPage>
   );
 };
-

@@ -1,0 +1,64 @@
+{
+    "information": [
+        {
+            "time": "09:00 am",
+            "restaurants": [
+                {
+                    "name": "Name",
+                    "openingTime": "09:00 am",
+                    "endingTime": "18:00 pm",
+                    "area": "Queens",
+                    "menu": ["Food1", "Food2", "Food3"],
+                    "cuisine": "Spanish",
+                    "description": "Great Spanish food available to eat",
+                    "id": "1"
+                }
+            ]
+        },
+        {
+            "time": "09:00 am",
+            "restaurants": [
+                {
+                    "name": "Name",
+                    "openingTime": "07:00 am",
+                    "endingTime": "18:00 pm",
+                    "area": "Brooklyn",
+                    "menu": ["Food1", "Food2", "Food3"],
+                    "cuisine": "Swiss",
+                    "description": "Great Swiss food available to eat",
+                    "id": "1"
+                }
+            ]
+        },
+        {
+            "time": "09:00 am",
+            "restaurants": [
+                {
+                    "name": "Name",
+                    "openingTime": "08:00 am",
+                    "endingTime": "18:00 pm",
+                    "area": "The Bronx",
+                    "menu": ["Food1", "Food2", "Food3"],
+                    "cuisine": "Danish",
+                    "description": "Great Danish food available to eat",
+                    "id": "1"
+                }
+            ]
+        },
+        {
+            "time": "10:00 am",
+            "restaurants": [
+                {
+                    "name": "Name",
+                    "openingTime": "09:00 am",
+                    "endingTime": "18:00 pm",
+                    "area": "Manhatten",
+                    "menu": ["Food1", "Food2", "Food3"],
+                    "cuisine": "French",
+                    "description": "Great French food available to eat",
+                    "id": "1"
+                }
+            ]
+        }
+    ]
+}
