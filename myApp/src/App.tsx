@@ -1,24 +1,17 @@
+import Menu from './components/Menu';
+import Page from './pages/Page';
+import About from './pages/About';
+import Reviews from './pages/Reviews';
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs
-} from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse } from 'ionicons/icons';
-import { Home } from './pages/Home';
-import { Help } from './pages/Help';
-import { About } from './pages/About';
-import { Intro } from './pages/Intro';
-import { Menu } from './pages/Menu';
-import { Restaurants } from './pages/Restaurants';
-import { Times } from './pages/Times';
-import './App.css';
+import { Redirect, Route } from 'react-router-dom';
+import { trophyOutline, list } from 'ionicons/icons';
+import LandingPage from './pages/LandingPage';
+import Support from './pages/Support';
+import Sofas from './pages/Sofas';
+import SofaGoals from './pages/SofaGoals';
+import Planner from './pages/Planner';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -39,53 +32,29 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route path="/home" component={Home} exact={true} />
-          <Route path="/help" component={Help} exact={true} />
-          <Route path="/about" component={About} exact={true} />
-          <Route path="/intro" component={Intro} exact={true} />
-          <Route path="/menu" component={Menu} exact={true} />
-          <Route path="/restaurants" component={Restaurants} exact={true} />
-          <Route path="/times" component={Times} exact={true} />
-          <Route path="/" render={() => <Redirect to="/home" />} exact={true} />
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="home" href="/home">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="help" href="/help">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Help</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="about" href="/about">
-            <IonIcon icon={ellipse} />
-            <IonLabel>About</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="intro" href="/intro">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Intro</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="menu" href="/menu">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Menu</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="restuarants" href="/restaurants">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Restaurants</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="times" href="/times">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Times</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+
+const App: React.FC = () => {
+
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonSplitPane contentId="main">
+          <Menu />
+          <IonRouterOutlet id="main">
+            <Route path="/support" component={Support} exact />
+            <Route path="/page/reviews" component={Reviews} exact />
+            <Route path="/page/about" component={About} exact />
+            <Route path="/page/:name" component={Page} exact />
+            <Route path="/sofas/list" component={Sofas} exact />
+            <Route path="/sofas/:sofaId" component={SofaGoals} exact />
+            <Route path="/planner" component={Planner} exact />
+            <Route path="/home" component={LandingPage} exact />
+            <Redirect from="/" to="/home" exact />
+          </IonRouterOutlet>
+        </IonSplitPane>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
