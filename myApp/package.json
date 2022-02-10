@@ -22,7 +22,7 @@
     "gsap": "^3.2.6",
     "ionicons": "^5.0.0",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.0",
